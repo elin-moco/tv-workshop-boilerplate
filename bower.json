@@ -1,0 +1,22 @@
+{
+  "name": "Firefox OS TV workshop boilerplate",
+  "version": "0.0.1",
+  "authors": [
+    "Eddie Lin <elin@mozilla.com>"
+  ],
+  "license": "MPL-2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "flickity": "~1.1.1",
+    "jquery": "~2.1.4",
+    "jquery-infinite-scroll": "infinite-scroll#~2.1.0",
+    "masonry": "~3.3.2",
+    "pleasejs": "~0.4.2"
+  }
+}
