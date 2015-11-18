@@ -20,7 +20,7 @@ Resolution for TVs range from 720P to 4K, so make sure elements looks big and sh
 Checkout [js-spatial-navigation] and [implementing TV remote control navigation] for details.  
 You can install [js-spatial-navigation] with bower:
 ```sh
-bower install https://github.com/luke-chang/js-spatial-navigation/
+bower install https://github.com/luke-chang/js-spatial-navigation.git#adffe9de1b0162b84dba916df790b507c4b6c858
 ```
 [bower]: http://bower.io/
 [js-spatial-navigation]: https://github.com/luke-chang/js-spatial-navigation/
