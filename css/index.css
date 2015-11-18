@@ -96,9 +96,13 @@ body {
     z-index: 6000;
 }
 
-#infscr-loading em {
-    color: #FFF;
-    text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+#infscr-loading > div {
+    font-style: normal;
+    font-weight: bolder;
+    color: #383838;
+    line-height: 36px;
+    font-size: 20px;
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.5);
 }
 
 .flickity-viewport {
