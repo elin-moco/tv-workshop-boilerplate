@@ -1,0 +1,15 @@
+{
+  "name": "TV App Boilerplate",
+  "description": "A template app for practicing TV content optimization",
+  "launch_path": "/index.html",
+  "icons": {
+    "16": "/img/boilerplate16x16.png",
+    "48": "/img/boilerplate48x48.png",
+    "60": "/img/boilerplate60x60.png",
+    "128": "/img/boilerplate128x128.png"
+  },
+  "developer": {
+    "name": "Eddie Lin",
+    "url": "http://github.com/elin-moco/"
+  }
+}
