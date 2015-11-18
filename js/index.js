@@ -24,18 +24,28 @@ $(function() {
     straightOnly: true
   });
 
-  $('#banners').flickity({
+  var $banners = $('#banners');
+  $banners.flickity({
     pageDots: false,
-    wrapAround: true,
-    contain: true
-  }).find('.banner').each(function(index, banner) {
+    wrapAround: true
+  }).find('.banner').on('sn:willfocus', function() {
+    ($(this).index(), $banners.data('flickity').selectedIndex);
+    var next = $(this).index() - $banners.data('flickity').selectedIndex;
+    if (1 == next || next < -1) {
+      $banners.flickity('next');
+    } else if (-1 == next || next > 1) {
+      $banners.flickity('previous');
+    }
+  }).each(function(index, banner) {
     $(banner).css('background-color', Please.make_color());
   });
 
   $('#collections').flickity({
     pageDots: false,
-    cellAlign: 'left',
+    cellAlign: 'center',
     contain: true
+  }).find('.collection-col').on('sn:willfocus', function() {
+    $('#collections').flickity('select', $(this).index());
   }).find('.collection').each(function(index, collection) {
     $(collection).text(index + 1)
       .css('background-color', Please.make_color());
@@ -74,7 +84,7 @@ $(function() {
           .text(++itemCount);
       });
       $(this).masonry('appended', $newItems);
-      //SN.init();
+      //Make new items focusable
       SN.makeFocusable();
     });
 
