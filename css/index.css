@@ -9,9 +9,6 @@ body {
     font-family: sans-serif;
 }
 
-.banners {
-}
-
 .banner {
     width: 920px;
     height: 300px;
@@ -29,8 +26,8 @@ body {
     color: white;
 }
 
-.collections {
-    margin-top: 20px;
+#collections {
+    margin-top: 0;
 }
 
 .collection-col > .collection {
@@ -50,12 +47,12 @@ body {
     margin-right: 10px;
 }
 
-.items {
+#items {
     margin: auto;
-    margin-top: 40px;
+    margin-top: 0;
 }
 
-.items .navigation {
+#items .navigation {
     display: none;
 }
 
@@ -70,6 +67,25 @@ body {
 
 }
 
+.banner, .collection, .item {
+    outline: 0;
+    transition: transform 0.1s linear, box-shadow 0.1s linear, filter 0.1s linear;
+}
+.banner:focus, .collection:focus, .item:focus {
+    filter: brightness(1.2);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    transform-origin: 50%;
+    z-index: 65535;
+}
+.banner.pressed, .collection.pressed, .item.pressed {
+    filter: brightness(0.8);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    transform: scale(1.06);
+    transform-origin: 50%;
+    z-index: 65535;
+}
+
 #infscr-loading {
     position: fixed;
     bottom: 20px;
@@ -82,6 +98,11 @@ body {
 #infscr-loading em {
     color: #FFF;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.flickity-viewport {
+    padding-bottom: 30px;
+    box-sizing: content-box;
 }
 
 @media (max-width: 1000px){
