@@ -76,14 +76,14 @@ body {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
     transform: scale(1.1);
     transform-origin: 50%;
-    z-index: 65535;
+    z-index: 5000;
 }
 .banner.pressed, .collection.pressed, .item.pressed {
     filter: brightness(0.8);
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
     transform: scale(1.06);
     transform-origin: 50%;
-    z-index: 65535;
+    z-index: 5000;
 }
 
 #infscr-loading {
@@ -93,6 +93,7 @@ body {
     left: 50%;
     margin-left: -110px;
     text-align: center;
+    z-index: 6000;
 }
 
 #infscr-loading em {
