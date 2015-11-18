@@ -6,12 +6,14 @@ $(function() {
   // Add first section "banners".
   SN.add('banners', {
     selector: '#banners .banner',
+    defaultElement: '.is-selected',
     straightOnly: true
   });
 
   // Add "collections" section.
   SN.add('collections', {
     selector: '#collections .collection',
+    defaultElement: '.is-selected',
     enterTo: 'last-focused',
     straightOnly: true
   });
@@ -37,6 +39,16 @@ $(function() {
   }).find('.collection').each(function(index, collection) {
     $(collection).text(index + 1)
       .css('background-color', Please.make_color());
+  });
+
+  $('.banner, .collection').click(function() {
+    this.focus();
+  });
+
+  $('.banner, .collection, .item').on('sn:enter-down', function() {
+    $(this).addClass('pressed');
+  }).on('sn:enter-up', function() {
+    $(this).removeClass('pressed');
   });
 
   var itemCount = 0;

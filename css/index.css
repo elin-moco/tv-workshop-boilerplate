@@ -69,13 +69,19 @@ body {
 
 .banner, .collection, .item {
     outline: 0;
-    transition: transform 0.2s linear, box-shadow 0.2s linear, filter 0.2s linear;
+    transition: transform 0.1s linear, box-shadow 0.1s linear, filter 0.1s linear;
 }
 .banner:focus, .collection:focus, .item:focus {
-    /*opacity: 0.8;*/
     filter: brightness(1.2);
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
     transform: scale(1.1);
+    transform-origin: 50%;
+    z-index: 65535;
+}
+.banner.pressed, .collection.pressed, .item.pressed {
+    filter: brightness(0.8);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    transform: scale(1.06);
     transform-origin: 50%;
     z-index: 65535;
 }
