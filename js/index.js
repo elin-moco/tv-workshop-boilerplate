@@ -1,4 +1,27 @@
 $(function() {
+  // A short name of the SpatialNavigation singleton object.
+  var SN = SpatialNavigation;
+  // Initialize
+  SN.init();
+  // Add first section "banners".
+  SN.add('banners', {
+    selector: '#banners .banner',
+    straightOnly: true
+  });
+
+  // Add "collections" section.
+  SN.add('collections', {
+    selector: '#collections .collection',
+    enterTo: 'last-focused',
+    straightOnly: true
+  });
+
+  // Set "items" section.
+  SN.add('items', {
+    selector: '#items .item',
+    straightOnly: true
+  });
+
   $('#banners').flickity({
     pageDots: false,
     wrapAround: true,
@@ -39,6 +62,11 @@ $(function() {
           .text(++itemCount);
       });
       $(this).masonry('appended', $newItems);
+      //SN.init();
+      SN.makeFocusable();
     });
+
+    SN.makeFocusable();
+    SN.focus('banners');
   });
 });
