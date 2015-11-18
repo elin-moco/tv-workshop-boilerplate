@@ -35,7 +35,7 @@ $('.items').masonry({
   var $newItems = $(newItems);
   $newItems.each(function(index, newItem) {
     $(newItem).css('background-color', Please.make_color())
-      .height(Math.round(Math.random() * 300) + 300)
+      .height(Math.round(Math.random() * 300) + 150)
       .text(++itemCount);
   });
   $(this).masonry('appended', $newItems);
