@@ -1,5 +1,5 @@
 $(function() {
-  $('.banners').flickity({
+  $('#banners').flickity({
     pageDots: false,
     wrapAround: true,
     contain: true
@@ -7,7 +7,7 @@ $(function() {
     $(banner).css('background-color', Please.make_color());
   });
 
-  $('.collections').flickity({
+  $('#collections').flickity({
     pageDots: false,
     cellAlign: 'left',
     contain: true
@@ -22,7 +22,7 @@ $(function() {
       .height(Math.round(Math.random() * 300) + 300)
       .text(++itemCount);
   }).promise().then(function() {
-    $('.items').masonry({
+    $('#items').masonry({
       gutter: 10,
       isFitWidth: true
     }).infinitescroll({
@@ -41,5 +41,4 @@ $(function() {
       $(this).masonry('appended', $newItems);
     });
   });
-
 });
