@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>jquery-SpatialNavigation Demo Page</title>
+
+    <link rel="stylesheet" href="css/style_1.css">
+
+    <script src="../spatial_navigation.js"></script>
+    <script>
+      window.addEventListener('load', function() {
+        SpatialNavigation.init();
+
+        SpatialNavigation.add({
+          id: 'main',
+          selector: '.focusable',
+
+          // We can define our own filter function.
+          navigableFilter: function(elem) {
+            return elem.className.indexOf('filterout') < 0;
+          }
+        });
+
+        SpatialNavigation.makeFocusable();
+        SpatialNavigation.focus();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <div class="leftbox">
+        <div class="focusable"></div>
+        <div class="focusable"></div>
+        <div class="focusable filterout">I'll be skipped.</div>
+        <div class="focusable"></div>
+        <div class="nonfocusable"></div>
+      </div>
+      <div class="rightbox">
+        <div id="main" class="focusable"></div>
+        <div class="bottombox">
+          <div class="focusable"></div>
+          <div class="focusable"></div>
+          <div class="focusable"></div><br>
+          <div class="focusable"></div>
+          <div class="focusable"></div>
+          <div class="focusable"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
