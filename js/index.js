@@ -7,6 +7,7 @@ $(function() {
   SN.add('banners', {
     selector: '#banners .banner',
     defaultElement: '.is-selected',
+    straightOverlapThreshold: 0.4,
     straightOnly: true
   });
 
@@ -15,12 +16,14 @@ $(function() {
     selector: '#collections .collection',
     defaultElement: '.is-selected',
     enterTo: 'last-focused',
+    straightOverlapThreshold: 0.4,
     straightOnly: true
   });
 
   // Set "items" section.
   SN.add('items', {
     selector: '#items .item',
+    straightOverlapThreshold: 0.4,
     straightOnly: true
   });
 
