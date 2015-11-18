@@ -16,6 +16,7 @@
     "flickity": "~1.1.1",
     "jquery": "~2.1.4",
     "jquery-infinite-scroll": "infinite-scroll#~2.1.0",
+    "js-spatial-navigation": "https://github.com/luke-chang/js-spatial-navigation/",
     "masonry": "~3.3.2",
     "pleasejs": "~0.4.2"
   }
