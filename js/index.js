@@ -55,17 +55,25 @@ $(function() {
     this.focus();
   });
 
-  $('.banner, .collection, .item').on('sn:enter-down', function() {
+  var onEnterPressed = function() {
     $(this).addClass('pressed');
-  }).on('sn:enter-up', function() {
+  };
+  var onEnterReleased = function() {
     $(this).removeClass('pressed');
-  });
+  };
+
+  $('.banner, .collection, .item')
+    .on('sn:enter-down', onEnterPressed)
+    .on('sn:enter-up', onEnterReleased);
 
   var itemCount = 0;
-  $('.item').each(function(index, item) {
+  var updateItem = function(item) {
     $(item).css('background-color', Please.make_color())
       .height(Math.round(Math.random() * 300) + 300)
       .text(++itemCount);
+  };
+  $('.item').each(function(index, item) {
+    updateItem(item);
   }).promise().then(function() {
     $('#items').masonry({
       gutter: 10,
@@ -77,15 +85,16 @@ $(function() {
       },
       itemSelector: '.item'
     }, function(newItems) {
-      var $newItems = $(newItems);
-      $newItems.each(function(index, newItem) {
-        $(newItem).css('background-color', Please.make_color())
-          .height(Math.round(Math.random() * 300) + 150)
-          .text(++itemCount);
-      });
-      $(this).masonry('appended', $newItems);
       //Make new items focusable
       SN.makeFocusable();
+      var $newItems = $(newItems);
+      $newItems.each(function(index, newItem) {
+        updateItem(newItem);
+      });
+      $(this).masonry('appended', $newItems);
+      $newItems
+        .on('sn:enter-down', onEnterPressed)
+        .on('sn:enter-up', onEnterReleased);
     });
 
     SN.makeFocusable();
