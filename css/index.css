@@ -7,6 +7,7 @@
 
 body {
     font-family: sans-serif;
+    background: #FFFFFF;
 }
 
 .banner {
@@ -49,7 +50,7 @@ body {
 
 #items {
     margin: auto;
-    margin-top: 0;
+    margin-top: 20px;
 }
 
 #items .navigation {
@@ -108,6 +109,70 @@ body {
 .flickity-viewport {
     padding-bottom: 30px;
     box-sizing: content-box;
+}
+
+#collections .flickity-viewport {
+    padding-top: 20px;
+}
+
+@media (min-width: 1400px){
+    .banner {
+        width: 1200px;
+        height: 390px;
+    }
+    .banner:before {
+        line-height: 390px;
+    }
+    .collection-col > .collection {
+        height: 200px;
+        margin-top: 0;
+        line-height: 200px;
+    }
+
+    .collection-col {
+        width: 300px;
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 2000px){
+    .banner {
+        width: 1800px;
+        height: 590px;
+    }
+    .banner:before {
+        line-height: 590px;
+    }
+    .collection-col > .collection {
+        height: 240px;
+        margin-top: 0;
+        line-height: 240px;
+    }
+
+    .collection-col {
+        width: 360px;
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 4000px){
+    .banner {
+        width: 3600px;
+        height: 1180px;
+    }
+    .banner:before {
+        line-height: 1180px;
+    }
+    .collection-col > .collection {
+        height: 480px;
+        margin-top: 0;
+        line-height: 480px;
+    }
+
+    .collection-col {
+        width: 720px;
+        margin-right: 0;
+    }
 }
 
 @media (max-width: 1000px){
