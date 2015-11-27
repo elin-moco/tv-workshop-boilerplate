@@ -55,6 +55,7 @@ body {
 
 #items .navigation {
     display: none;
+    bottom: 100px !important;
 }
 
 .item {
