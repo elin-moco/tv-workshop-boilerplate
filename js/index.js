@@ -27,6 +27,9 @@ $(function() {
     straightOnly: true
   });
 
+  var onFocus = function() {
+    $.scrollTo($(this).offset().top - 60, 100);
+  };
   var onEnterPressed = function() {
     $(this).addClass('pressed');
   };
@@ -35,6 +38,7 @@ $(function() {
   };
 
   $('.banner, .collection, .item')
+    .on('sn:willfocus', onFocus)
     .on('sn:enter-down', onEnterPressed)
     .on('sn:enter-up', onEnterReleased);
 
@@ -108,6 +112,7 @@ $(function() {
       });
       $(this).masonry('appended', $newItems);
       $newItems
+        .on('sn:willfocus', onFocus)
         .on('sn:enter-down', onEnterPressed)
         .on('sn:enter-up', onEnterReleased);
     });
