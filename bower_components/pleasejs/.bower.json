@@ -28,6 +28,5 @@
   },
   "_source": "git://github.com/Fooidge/PleaseJS.git",
   "_target": "~0.4.2",
-  "_originalSource": "pleasejs",
-  "_direct": true
+  "_originalSource": "pleasejs"
 }

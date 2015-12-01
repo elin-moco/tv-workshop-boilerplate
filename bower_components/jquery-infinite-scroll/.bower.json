@@ -27,6 +27,5 @@
   },
   "_source": "git://github.com/paulirish/infinite-scroll.git",
   "_target": "~2.1.0",
-  "_originalSource": "infinite-scroll",
-  "_direct": true
+  "_originalSource": "infinite-scroll"
 }

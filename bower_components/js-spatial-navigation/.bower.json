@@ -1,11 +1,12 @@
 {
   "name": "js-spatial-navigation",
-  "_cacheHeaders": {
-    "Content-Type": "text/html; charset=utf-8"
+  "homepage": "https://github.com/luke-chang/js-spatial-navigation",
+  "_release": "adffe9de1b",
+  "_resolution": {
+    "type": "commit",
+    "commit": "adffe9de1b0162b84dba916df790b507c4b6c858"
   },
-  "main": "index",
-  "_source": "https://github.com/luke-chang/js-spatial-navigation/",
-  "_target": "*",
-  "_originalSource": "https://github.com/luke-chang/js-spatial-navigation/",
-  "_direct": true
+  "_source": "https://github.com/luke-chang/js-spatial-navigation.git",
+  "_target": "adffe9de1b0162b84dba916df790b507c4b6c858",
+  "_originalSource": "https://github.com/luke-chang/js-spatial-navigation.git"
 }

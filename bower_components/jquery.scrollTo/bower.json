@@ -1,6 +1,7 @@
 {
   "name": "jquery.scrollTo",
-  "description": "Lightweight, cross-browser and highly customizable animated scrolling with jQuery",
+  "version": "1.4.14",
+  "description": "Easy element scrolling using jQuery.",
   "homepage": "https://github.com/flesler/jquery.scrollTo",
   "main": [
     "./jquery.scrollTo.js"
@@ -9,16 +10,14 @@
     "**/.*",
     "demo",
     "tests",
-    "CHANGELOG",
-    "README.md",
-    "composer.json",
-    "package.json"
+    "changes.txt",
+    "composer.json"
   ],
   "dependencies": {
-    "jquery": ">=1.8"
+    "jquery": ">=1.4"
   },
   "keywords": [
-    "browser", "animated", "animation", "jquery",
+    "browser", "animated", "animation", 
     "scrolling", "scroll", "links", "anchors"
   ],
   "author": {

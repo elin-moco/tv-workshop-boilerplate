@@ -49,6 +49,5 @@
   },
   "_source": "git://github.com/desandro/masonry.git",
   "_target": "~3.3.2",
-  "_originalSource": "masonry",
-  "_direct": true
+  "_originalSource": "masonry"
 }
