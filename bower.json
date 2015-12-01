@@ -14,7 +14,7 @@
   ],
   "dependencies": {
     "flickity": "~1.1.1",
-    "jquery": "~2.1.4",
+    "jquery": "~1.7.2",
     "jquery-infinite-scroll": "infinite-scroll#~2.1.0",
     "jquery.scrollTo": "~2.1.2",
     "js-spatial-navigation": "https://github.com/luke-chang/js-spatial-navigation.git#adffe9de1b0162b84dba916df790b507c4b6c858",

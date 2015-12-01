@@ -53,9 +53,8 @@ body {
     margin-top: 20px;
 }
 
-#items .navigation {
-    display: none;
-    bottom: 100px !important;
+.navigation {
+    visibility: hidden;
 }
 
 .item {
@@ -66,7 +65,7 @@ body {
     color: #FFF;
     font-size: 60px;
     padding: 20px;
-
+    clear: both;
 }
 
 .banner, .collection, .item {
