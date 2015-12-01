@@ -52,8 +52,8 @@ body {
     margin-top: 40px;
 }
 
-#items .navigation {
-    display: none;
+.navigation {
+    visibility: hidden;
 }
 
 .item {
@@ -64,7 +64,7 @@ body {
     color: #FFF;
     font-size: 60px;
     padding: 20px;
-
+    clear: both;
 }
 
 #infscr-loading {

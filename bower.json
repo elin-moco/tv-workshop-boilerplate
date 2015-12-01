@@ -14,7 +14,7 @@
   ],
   "dependencies": {
     "flickity": "~1.1.1",
-    "jquery": "~2.1.4",
+    "jquery": "~1.7.2",
     "jquery-infinite-scroll": "infinite-scroll#~2.1.0",
     "masonry": "~3.3.2",
     "pleasejs": "~0.4.2"
