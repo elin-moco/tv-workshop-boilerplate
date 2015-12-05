@@ -34,7 +34,11 @@ $(function() {
     $(this).addClass('pressed');
   };
   var onEnterReleased = function() {
-    $(this).removeClass('pressed');
+    var $this = $(this);
+    $this.removeClass('pressed');
+    if ($this.hasClass('banner')) {
+      showPopup();
+    }
   };
 
   $('.banner, .collection, .item')
@@ -56,14 +60,15 @@ $(function() {
   var $banners = $('#banners');
   $banners.flickity({
     pageDots: false,
-    wrapAround: true
+    wrapAround: true,
+    contain: true
   }).find('.banner').on('sn:willfocus', function() {
     onBannerFocused(this);
   }).click(function() {
     onBannerFocused(this);
     this.focus();
   }).each(function(index, banner) {
-    $(banner).css('background-color', Please.make_color());
+    $(banner).click(showPopup).css('background-color', Please.make_color());
   });
 
   // Setup collections

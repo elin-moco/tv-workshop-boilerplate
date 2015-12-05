@@ -3,8 +3,11 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>TV App Boilerplate</title>
+  <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="bower_components/flickity/dist/flickity.css"
         media="screen"/>
+  <link rel="stylesheet" href="css/popup.css" media="screen"/>
   <link rel="stylesheet" href="css/index.css" media="screen"/>
 </head>
 <body>
@@ -62,21 +65,208 @@
   <div class="item"></div>
   <div class="navigation"><a href="index.html#2">Next</a></div>
 </div>
+<!-- Begin of Popup -->
+<div id="popup" class="hide">
+  <div id="item-content">
+    <div id="item-main">
+      <div id="item-icon"></div>
+      <div id="item-meta">
+        <h2 id="item-title" data-lorem="1-4w"></h2>
+        <div id="item-description" data-lorem="1s"></div>
+      </div>
+      <div id="item-action">
+        <div class="action">Action</div>
+      </div>
+    </div>
+    <ul id="item-tabs">
+      <li>
+        <input type="radio" name="tabs" id="tab1" checked/>
+        <label for="tab1">Overview</label>
+        <div id="tab-content1" class="tab-content">
+          <div id="screenshots">
+            <div class="screenshot"></div>
+            <div class="screenshot"></div>
+            <div class="screenshot"></div>
+          </div>
+          <div id="item-properties">
+            <ul>
+              <li data-lorem="2-4w"></li>
+              <li data-lorem="2-4w"></li>
+              <li data-lorem="2-4w"></li>
+              <li data-lorem="2-4w"></li>
+              <li data-lorem="2-4w"></li>
+              <li data-lorem="2-4w"></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li>
+        <input type="radio" name="tabs" id="tab2"/>
+        <label for="tab2">Comments</label>
+        <div id="tab-content2" class="tab-content">
+          <div id="comments">
+            <div class="comment">
+              <div class="commenter" data-lorem="1-2w"></div>
+              <div class="comment-content" data-lorem="1-2s"></div>
+            </div>
+            <div class="comment">
+              <div class="commenter" data-lorem="1-2w"></div>
+              <div class="comment-content" data-lorem="1-2s"></div>
+            </div>
+            <div class="comment">
+              <div class="commenter" data-lorem="1-2w"></div>
+              <div class="comment-content" data-lorem="1-2s"></div>
+            </div>
+            <div class="comment">
+              <div class="commenter" data-lorem="1-2w"></div>
+              <div class="comment-content" data-lorem="1-2s"></div>
+            </div>
+            <div class="comment">
+              <div class="commenter" data-lorem="1-2w"></div>
+              <div class="comment-content" data-lorem="1-2s"></div>
+            </div>
+            <div class="comment">
+              <div class="commenter" data-lorem="1-2w"></div>
+              <div class="comment-content" data-lorem="1-2s"></div>
+            </div>
+            <div class="comment">
+              <div class="commenter" data-lorem="1-2w"></div>
+              <div class="comment-content" data-lorem="1-2s"></div>
+            </div>
+            <div class="comment">
+              <div class="commenter" data-lorem="1-2w"></div>
+              <div class="comment-content" data-lorem="1-2s"></div>
+            </div>
+            <div class="comment">
+              <div class="commenter" data-lorem="1-2w"></div>
+              <div class="comment-content" data-lorem="1-2s"></div>
+            </div>
+            <div class="comment">
+              <div class="commenter" data-lorem="1-2w"></div>
+              <div class="comment-content" data-lorem="1-2s"></div>
+            </div>
+            <div class="comment">
+              <div class="commenter" data-lorem="1-2w"></div>
+              <div class="comment-content" data-lorem="1-2s"></div>
+            </div>
+            <div class="comment">
+              <div class="commenter" data-lorem="1-2w"></div>
+              <div class="comment-content" data-lorem="1-2s"></div>
+            </div>
+            <div class="comment">
+              <div class="commenter" data-lorem="1-2w"></div>
+              <div class="comment-content" data-lorem="1-2s"></div>
+            </div>
+            <div class="comment">
+              <div class="commenter" data-lorem="1-2w"></div>
+              <div class="comment-content" data-lorem="1-2s"></div>
+            </div>
+            <div class="comment">
+              <div class="commenter" data-lorem="1-2w"></div>
+              <div class="comment-content" data-lorem="1-2s"></div>
+            </div>
+            <div class="comment">
+              <div class="commenter" data-lorem="1-2w"></div>
+              <div class="comment-content" data-lorem="1-2s"></div>
+            </div>
+            <div class="comment">
+              <div class="commenter" data-lorem="1-2w"></div>
+              <div class="comment-content" data-lorem="1-2s"></div>
+            </div>
+            <div class="comment">
+              <div class="commenter" data-lorem="1-2w"></div>
+              <div class="comment-content" data-lorem="1-2s"></div>
+            </div>
+            <div class="comment">
+              <div class="commenter" data-lorem="1-2w"></div>
+              <div class="comment-content" data-lorem="1-2s"></div>
+            </div>
+            <div class="comment">
+              <div class="commenter" data-lorem="1-2w"></div>
+              <div class="comment-content" data-lorem="1-2s"></div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <input type="radio" name="tabs" id="tab3"/>
+        <label for="tab3">Related</label>
+        <div id="tab-content3" class="tab-content">
+          <div id="related">
+            <div class="rel-page">
+              <div class="rel-item"></div>
+              <div class="rel-item"></div>
+              <div class="rel-item"></div>
+              <div class="rel-item"></div>
+              <div class="rel-item"></div>
+              <div class="rel-item"></div>
+              <div class="rel-item"></div>
+              <div class="rel-item"></div>
+              <div class="rel-item"></div>
+              <div class="rel-item"></div>
+              <div class="rel-item"></div>
+              <div class="rel-item"></div>
+            </div>
+            <div class="rel-page">
+              <div class="rel-item"></div>
+              <div class="rel-item"></div>
+              <div class="rel-item"></div>
+              <div class="rel-item"></div>
+              <div class="rel-item"></div>
+              <div class="rel-item"></div>
+              <div class="rel-item"></div>
+              <div class="rel-item"></div>
+              <div class="rel-item"></div>
+              <div class="rel-item"></div>
+              <div class="rel-item"></div>
+              <div class="rel-item"></div>
+            </div>
+            <div class="rel-page">
+              <div class="rel-item"></div>
+              <div class="rel-item"></div>
+              <div class="rel-item"></div>
+              <div class="rel-item"></div>
+              <div class="rel-item"></div>
+              <div class="rel-item"></div>
+              <div class="rel-item"></div>
+              <div class="rel-item"></div>
+              <div class="rel-item"></div>
+              <div class="rel-item"></div>
+              <div class="rel-item"></div>
+              <div class="rel-item"></div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div id="close-popup"><i class="fa fa-times fa-2x"></i></div>
+  </div>
+<!-- End of Popup -->
+</div>
 
 <script type="application/javascript"
         src="bower_components/jquery/jquery.min.js"></script>
+<!-- generate random colors -->
 <script type="application/javascript"
         src="bower_components/pleasejs/dist/Please.js"></script>
+<!-- generate dummy text and images -->
+<script type="application/javascript"
+        src="bower_components/loremjs/lorem.js"></script>
+<!-- pinterest-like layout -->
 <script type="application/javascript"
         src="bower_components/masonry/dist/masonry.pkgd.min.js"></script>
+<!-- carousel library -->
 <script type="application/javascript"
         src="bower_components/flickity/dist/flickity.pkgd.min.js"></script>
+<!-- lazy loading -->
 <script type="application/javascript"
         src="bower_components/jquery-infinite-scroll/jquery.infinitescroll.min.js"></script>
 <script type="application/javascript"
         src="bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
 <script type="application/javascript"
         src="bower_components/js-spatial-navigation/spatial_navigation.js"></script>
+<!-- main scripts -->
+<script type="application/javascript" src="js/popup.js"></script>
 <script type="application/javascript" src="js/index.js"></script>
 
 </body>
