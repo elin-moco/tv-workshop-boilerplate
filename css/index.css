@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Fira Sans';
 }
 
 .banner {
@@ -85,22 +85,311 @@ body {
     text-shadow: 1px 1px rgba(255, 255, 255, 0.5);
 }
 
-@media (max-width: 1000px){
+#popup {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#item-content {
+    display: block;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 920px;
+    height: 560px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px #000;
+}
+
+#popup.hide {
+    display: none;
+}
+
+#item-main {
+    background-color: #F6F4EC;
+    display: flex;
+    flex-direction: row;
+    padding: 12px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#item-meta {
+    padding-left: 12px;
+    flex-grow: 3;
+}
+
+#item-title {
+    margin: 6px 0;
+}
+
+#item-icon {
+    width: 64px;
+    height: 64px;
+    background: url(http://lorempixel.com/g/64/64/abstract);
+}
+
+#item-tabs #tab-content1 {
+    display: flex;
+}
+
+#tab-content1 ul {
+    margin: 20px;
+    list-style: disc;
+}
+
+#tab-content1 ul li {
+    float: none;
+}
+
+.comment {
+    padding: 6px 12px;
+}
+
+.commenter {
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.commenter:before {
+    content: "";
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: url(http://lorempixel.com/g/32/32/animals);
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+#item-tabs {
+    padding: 0;
+    float: none;
+    list-style: none;
+    position: relative;
+    margin: auto;
+    text-align: left;
+}
+
+#item-tabs li {
+    float: left;
+    display: block;
+}
+
+#item-tabs input[type="radio"] {
+    position: absolute;
+    display: none;
+}
+
+#item-tabs label {
+    display: block;
+    padding: 14px 21px;
+    font-size: 14px;
+    background: linear-gradient(#F6F4EC, #D7D3C8);
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    width: 150px;
+    -webkit-border-radius: 5px 5px 0 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    border-top: 1px solid #888888;
+    border-right: 1px solid #888888;
+    border-bottom: 1px solid #888888;
+    text-align: center;
+}
+
+#item-tabs label:hover {
+    background: #D7D3C8;
+}
+
+#item-tabs:after {
+    content: "\00a0";
+    display: block;
+    padding: 14px 21px;
+    font-size: 14px;
+    font-weight: bold;
+    background: linear-gradient(#F6F4EC, #D7D3C8);
+    border-top: 1px solid #888888;
+    border-bottom: 1px solid #888888;
+}
+
+#item-tabs .tab-content {
+    z-index: 2;
+    display: none;
+    overflow: hidden;
+    width: 100%;
+    font-size: 17px;
+    line-height: 25px;
+    position: absolute;
+    top: 52px;
+    left: 0;
+    background: #FFF;
+}
+
+#item-tabs .tab-content p {
+    padding: 0 20px;
+}
+
+#item-tabs [name="tabs"]:checked + label {
+    background: #FFF;
+    border-bottom: 1px solid #FFF;
+}
+
+#item-tabs [name="tabs"]:checked ~ .tab-content {
+    display: block;
+}
+
+#screenshots {
+    margin-top: 6px;
+    margin-left: 12px;
+    width: 600px;
+}
+
+.screenshot {
+    width: 600px;
+    height: 400px;
+    background: url(http://lorempixel.com/g/600/400/nature);
+    counter-increment: screenshot;
+}
+
+.screenshot:before {
+    content: counter(screenshot);
+    display: block;
+    text-align: center;
+    line-height: 400px;
+    font-size: 80px;
+    color: white;
+}
+
+#comments {
+    overflow-y: scroll;
+    height: 400px;
+    margin-top: 6px;
+}
+
+.comment {
+    border-bottom: 1px solid #888888;
+}
+
+#related {
+    margin-top: 6px;
+}
+
+.rel-page {
+    width: 920px;
+    height: 400px;
+    counter-increment: related;
+}
+
+.rel-item {
+    display: inline-block;
+    width: 200px;
+    height: 120px;
+    margin: 6px 12px;
+    background: url(http://lorempixel.com/g/200/120/abstract);
+}
+
+.rel-page:before {
+    content: counter(related);
+    position: absolute;
+    display: block;
+    text-align: center;
+    line-height: 400px;
+    font-size: 120px;
+    color: white;
+    width: 100%;
+    text-shadow: 3px 3px 10px #000;
+}
+
+/* position dots in gallery */
+#item-tabs .flickity-page-dots {
+    bottom: 6px;
+    text-align: center;
+}
+
+/* white circles */
+#item-tabs .flickity-page-dots .dot {
+    display: inline-block;
+    float: none;
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    background: transparent;
+    border: 2px solid white;
+    box-shadow: 1px 1px 3px #000;
+}
+
+/* fill-in selected dot */
+#item-tabs .flickity-page-dots .dot.is-selected {
+    background: white;
+}
+
+#item-action {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.action {
+    background: #43a6e2;
+    background-image: linear-gradient(to bottom, #43a6e2, #277ac1);
+    border-radius: 28px;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+.action:hover {
+    background: #3cb0fd;
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+}
+
+#close-popup {
+    position: absolute;
+    right: -16px;
+    top: -16px;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 36px;
+    border: 3px solid #FFF;
+    border-radius: 18px;
+    color: #FFF;
+    background-color: #000;
+    box-shadow: 3px 3px 10px #000;
+    cursor: pointer;
+}
+
+@media (max-width: 1000px) {
     .banner {
         width: 760px;
         height: 248px;
     }
+
     .banner:before {
         line-height: 248px;
     }
 }
 
-@media (max-width: 760px){
+@media (max-width: 760px) {
     .banner {
         width: 480px;
         height: 156px;
         margin-right: 0;
     }
+
     .banner:before {
         line-height: 156px;
     }
@@ -115,14 +404,40 @@ body {
         width: 160px;
         margin-right: 0;
     }
+
+    #item-tabs {
+        width: 100%;
+    }
+
+    #item-tabs li {
+        float: none;
+        margin-top: 20px;
+    }
+
+    #item-tabs .tab-content {
+        position: relative;
+        display: block;
+        top: 0;
+    }
+
+    #item-tabs label {
+        top: 0;
+        padding-top: 17px;
+        background: #FFF;
+    }
+
+    #item-tabs label:hover {
+        background: #FFF;
+    }
 }
 
-@media (max-width: 480px){
+@media (max-width: 480px) {
     .banner {
         width: 320px;
         height: 120px;
         margin-right: 0;
     }
+
     .banner:before {
         line-height: 120px;
     }

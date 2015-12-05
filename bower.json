@@ -16,7 +16,9 @@
     "flickity": "~1.1.1",
     "jquery": "~1.7.2",
     "jquery-infinite-scroll": "infinite-scroll#~2.1.0",
+    "loremjs": "https://github.com/f/loremjs.git#2cd4acce8a84cf6b90b42c08e36574390e9a8090",
     "masonry": "~3.3.2",
-    "pleasejs": "~0.4.2"
+    "pleasejs": "~0.4.2",
+    "font-awesome": "fontawesome#~4.5.0"
   }
 }

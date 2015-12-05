@@ -1,10 +1,12 @@
 $(function() {
+  var $popup = $('#popup');
+
   $('#banners').flickity({
     pageDots: false,
     wrapAround: true,
     contain: true
   }).find('.banner').each(function(index, banner) {
-    $(banner).css('background-color', Please.make_color());
+    $(banner).click(showPopup).css('background-color', Please.make_color());
   });
 
   $('#collections').flickity({
@@ -40,5 +42,49 @@ $(function() {
       });
       $(this).masonry('appended', $newItems);
     });
+  });
+
+  $('input[name=tabs]').on('change', function() {
+    initScreenshots();
+    initRelated();
+  });
+
+  function initScreenshots() {
+    var $screenshots = $('#screenshots');
+    var flkt = $screenshots.data('flickity');
+    if (!flkt && $screenshots.is(':visible')) {
+      console.log('initScreenshots');
+      $screenshots.flickity({
+        contain: true
+      });
+    }
+  }
+
+  function initRelated() {
+    var $related = $('#related');
+    var flkt = $related.data('flickity');
+    if (!flkt && $related.is(':visible')) {
+      console.log('initRelated');
+      $related.flickity({
+        contain: true
+      });
+    }
+  }
+
+  function showPopup() {
+    $popup.removeClass('hide');
+    initScreenshots();
+    initRelated();
+  }
+
+  function hidePopup() {
+    $popup.addClass('hide');
+  }
+
+  $('#close-popup').click(hidePopup);
+  $popup.click(function(e) {
+    if (e.target == this) {
+      hidePopup();
+    }
   });
 });
