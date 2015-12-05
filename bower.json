@@ -18,7 +18,9 @@
     "jquery-infinite-scroll": "infinite-scroll#~2.1.0",
     "jquery.scrollTo": "~1.4.14",
     "js-spatial-navigation": "https://github.com/luke-chang/js-spatial-navigation.git#adffe9de1b0162b84dba916df790b507c4b6c858",
+    "loremjs": "https://github.com/f/loremjs.git#2cd4acce8a84cf6b90b42c08e36574390e9a8090",
     "masonry": "~3.3.2",
-    "pleasejs": "~0.4.2"
+    "pleasejs": "~0.4.2",
+    "font-awesome": "fontawesome#~4.5.0"
   }
 }
