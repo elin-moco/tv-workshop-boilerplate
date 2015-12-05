@@ -34,7 +34,11 @@ $(function() {
     $(this).addClass('pressed');
   };
   var onEnterReleased = function() {
-    $(this).removeClass('pressed');
+    var $this = $(this);
+    $this.removeClass('pressed');
+    if ($this.hasClass('banner')) {
+      showPopup();
+    }
   };
 
   $('.banner, .collection, .item')

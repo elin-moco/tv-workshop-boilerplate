@@ -5,6 +5,13 @@ $('input[name=tabs]').on('change', function() {
   initRelated();
 });
 
+$(window).keydown(function(evt) {
+  if (evt.keyCode == 27) {
+    hidePopup();
+    return false;
+  }
+});
+
 function initScreenshots() {
   var $screenshots = $('#screenshots');
   var flkt = $screenshots.data('flickity');
