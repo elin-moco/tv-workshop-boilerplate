@@ -75,18 +75,20 @@
         <div id="item-description" data-lorem="1s"></div>
       </div>
       <div id="item-action">
-        <div class="action">Action</div>
+        <div class="action sn-focusable"
+             data-sn-left="#item-tabs [name='tabs']:checked"
+             data-sn-down="#item-tabs [name='tabs']:checked">Action</div>
       </div>
     </div>
     <ul id="item-tabs">
       <li>
-        <input type="radio" name="tabs" id="tab1" checked/>
-        <label for="tab1">Overview</label>
+        <input type="radio" name="tabs" id="tab1" class="sn-focusable" checked/>
+        <label id="overview-tab" for="tab1">Overview</label>
         <div id="tab-content1" class="tab-content">
           <div id="screenshots">
-            <div class="screenshot"></div>
-            <div class="screenshot"></div>
-            <div class="screenshot"></div>
+            <div class="screenshot sn-focusable" data-sn-up="#item-tabs [name='tabs']:checked" data-sn-left=""></div>
+            <div class="screenshot sn-focusable" data-sn-up="#item-tabs [name='tabs']:checked"></div>
+            <div class="screenshot sn-focusable" data-sn-up="#item-tabs [name='tabs']:checked" data-sn-right=""></div>
           </div>
           <div id="item-properties">
             <ul>
@@ -101,10 +103,10 @@
         </div>
       </li>
       <li>
-        <input type="radio" name="tabs" id="tab2"/>
-        <label for="tab2">Comments</label>
+        <input type="radio" name="tabs" id="tab2" class="sn-focusable"/>
+        <label id="comments-tab" for="tab2">Comments</label>
         <div id="tab-content2" class="tab-content">
-          <div id="comments">
+          <div id="comments" class="sn-focusable">
             <div class="comment">
               <div class="commenter" data-lorem="1-2w"></div>
               <div class="comment-content" data-lorem="1-2s"></div>
@@ -189,57 +191,57 @@
         </div>
       </li>
       <li>
-        <input type="radio" name="tabs" id="tab3"/>
-        <label for="tab3">Related</label>
+        <input type="radio" name="tabs" id="tab3" class="sn-focusable"/>
+        <label id="related-tab" for="tab3">Related</label>
         <div id="tab-content3" class="tab-content">
           <div id="related">
             <div class="rel-page">
-              <div class="rel-item"></div>
-              <div class="rel-item"></div>
-              <div class="rel-item"></div>
-              <div class="rel-item"></div>
-              <div class="rel-item"></div>
-              <div class="rel-item"></div>
-              <div class="rel-item"></div>
-              <div class="rel-item"></div>
-              <div class="rel-item"></div>
-              <div class="rel-item"></div>
-              <div class="rel-item"></div>
-              <div class="rel-item"></div>
+              <div class="rel-item sn-focusable" data-sn-up="#item-tabs [name='tabs']:checked" data-sn-left=""></div>
+              <div class="rel-item sn-focusable" data-sn-up="#item-tabs [name='tabs']:checked"></div>
+              <div class="rel-item sn-focusable" data-sn-up="#item-tabs [name='tabs']:checked"></div>
+              <div class="rel-item sn-focusable" data-sn-up="#item-tabs [name='tabs']:checked"></div>
+              <div class="rel-item sn-focusable" data-sn-left=""></div>
+              <div class="rel-item sn-focusable"></div>
+              <div class="rel-item sn-focusable"></div>
+              <div class="rel-item sn-focusable"></div>
+              <div class="rel-item sn-focusable" data-sn-left=""></div>
+              <div class="rel-item sn-focusable"></div>
+              <div class="rel-item sn-focusable"></div>
+              <div class="rel-item sn-focusable"></div>
             </div>
             <div class="rel-page">
-              <div class="rel-item"></div>
-              <div class="rel-item"></div>
-              <div class="rel-item"></div>
-              <div class="rel-item"></div>
-              <div class="rel-item"></div>
-              <div class="rel-item"></div>
-              <div class="rel-item"></div>
-              <div class="rel-item"></div>
-              <div class="rel-item"></div>
-              <div class="rel-item"></div>
-              <div class="rel-item"></div>
-              <div class="rel-item"></div>
+              <div class="rel-item sn-focusable" data-sn-up="#item-tabs [name='tabs']:checked"></div>
+              <div class="rel-item sn-focusable" data-sn-up="#item-tabs [name='tabs']:checked"></div>
+              <div class="rel-item sn-focusable" data-sn-up="#item-tabs [name='tabs']:checked"></div>
+              <div class="rel-item sn-focusable" data-sn-up="#item-tabs [name='tabs']:checked"></div>
+              <div class="rel-item sn-focusable"></div>
+              <div class="rel-item sn-focusable"></div>
+              <div class="rel-item sn-focusable"></div>
+              <div class="rel-item sn-focusable"></div>
+              <div class="rel-item sn-focusable"></div>
+              <div class="rel-item sn-focusable"></div>
+              <div class="rel-item sn-focusable"></div>
+              <div class="rel-item sn-focusable"></div>
             </div>
             <div class="rel-page">
-              <div class="rel-item"></div>
-              <div class="rel-item"></div>
-              <div class="rel-item"></div>
-              <div class="rel-item"></div>
-              <div class="rel-item"></div>
-              <div class="rel-item"></div>
-              <div class="rel-item"></div>
-              <div class="rel-item"></div>
-              <div class="rel-item"></div>
-              <div class="rel-item"></div>
-              <div class="rel-item"></div>
-              <div class="rel-item"></div>
+              <div class="rel-item sn-focusable" data-sn-up="#item-tabs [name='tabs']:checked"></div>
+              <div class="rel-item sn-focusable" data-sn-up="#item-tabs [name='tabs']:checked"></div>
+              <div class="rel-item sn-focusable" data-sn-up="#item-tabs [name='tabs']:checked"></div>
+              <div class="rel-item sn-focusable" data-sn-up="#item-tabs [name='tabs']:checked" data-sn-right=""></div>
+              <div class="rel-item sn-focusable"></div>
+              <div class="rel-item sn-focusable"></div>
+              <div class="rel-item sn-focusable"></div>
+              <div class="rel-item sn-focusable" data-sn-right=""></div>
+              <div class="rel-item sn-focusable"></div>
+              <div class="rel-item sn-focusable"></div>
+              <div class="rel-item sn-focusable"></div>
+              <div class="rel-item sn-focusable" data-sn-right=""></div>
             </div>
           </div>
         </div>
       </li>
     </ul>
-    <div id="close-popup"><i class="fa fa-times fa-2x"></i></div>
+    <div id="close-popup" class="sn-focusable" data-sn-down=".action"><i class="fa fa-times fa-2x"></i></div>
   </div>
 <!-- End of Popup -->
 </div>
