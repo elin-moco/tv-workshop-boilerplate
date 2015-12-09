@@ -1,6 +1,6 @@
 $(function() {
   // A short name of the SpatialNavigation singleton object.
-  var SN = SpatialNavigation;
+  //var SN = SpatialNavigation;
   // Initialize spatial navigation
   SN.init();
   // Add first section "banners".
@@ -27,18 +27,14 @@ $(function() {
     straightOnly: true
   });
 
+  SN.add('popup', {
+    selector: '.sn-focusable',
+    restrict: 'self-only',
+    defaultElement: '#item-action .action'
+  });
+
   var onFocus = function() {
     $.scrollTo($(this).offset().top - 60, 100);
-  };
-  var onEnterPressed = function() {
-    $(this).addClass('pressed');
-  };
-  var onEnterReleased = function() {
-    var $this = $(this);
-    $this.removeClass('pressed');
-    if ($this.hasClass('banner')) {
-      showPopup();
-    }
   };
 
   $('.banner, .collection, .item')

@@ -52,10 +52,6 @@
     background: url(http://lorempixel.com/g/64/64/abstract);
 }
 
-#item-tabs #tab-content1 {
-    display: flex;
-}
-
 #tab-content1 ul {
     margin: 20px;
     list-style: disc;
@@ -100,7 +96,8 @@
 
 #item-tabs input[type="radio"] {
     position: absolute;
-    display: none;
+    opacity: 0;
+    /*display: none;*/
 }
 
 #item-tabs label {
@@ -163,6 +160,7 @@
 }
 
 #screenshots {
+    display: inline-block;
     margin-top: 6px;
     margin-left: 12px;
     width: 600px;
@@ -182,6 +180,12 @@
     line-height: 400px;
     font-size: 80px;
     color: white;
+}
+
+#item-properties {
+    display: inline-block;
+    width: 300px;
+    vertical-align: top;
 }
 
 #comments {
@@ -273,6 +277,14 @@
     background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
     text-decoration: none;
 }
+.action.pressed {
+    background: #3498db;
+    text-decoration: none;
+}
+
+#popup .screenshot.pressed:focus, #popup .rel-item.pressed:focus {
+    filter: brightness(0.8);
+}
 
 #close-popup {
     position: absolute;
@@ -289,6 +301,30 @@
     background-color: #000;
     box-shadow: 3px 3px 10px #000;
     cursor: pointer;
+}
+
+#close-popup.pressed {
+    top: -12px;
+}
+
+#popup .sn-focusable:focus {
+    box-shadow: 0 0 10px #FFFF00;
+    outline: none;
+    filter: brightness(1.2);
+}
+
+#popup .screenshot.sn-focusable:focus {
+    box-shadow: inset 0 0 10px #FFFF00;
+}
+
+#item-tabs [name="tabs"]:focus + label {
+    box-shadow: inset 0 0 10px #FFFF00;
+    outline: none;
+    filter: brightness(1.2);
+}
+
+#comments:focus {
+    background-color: #FFFF99;
 }
 
 @media (max-width: 1000px) {
